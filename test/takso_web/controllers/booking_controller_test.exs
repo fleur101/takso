@@ -25,5 +25,10 @@ defmodule TaksoWeb.BookingControllerTest do
     changeset = Booking.changeset(%Booking{}, %{pickup_address: "Liivi 2", dropoff_address: nil})
     assert Keyword.has_key? changeset.errors, :dropoff_address
   end
+
+  test "booking requires different 'pickup address' and 'dropoff address'" do
+    changeset = Booking.changeset(%Booking{}, %{pickup_address: "Liivi 2", dropoff_address: "Liivi 2"})
+    assert Keyword.has_key? changeset.errors, :same_address
+  end
 end
 
