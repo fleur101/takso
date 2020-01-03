@@ -17,5 +17,13 @@ defmodule TaksoWeb.SessionController do
         |> render("new.html")
     end
   end
+
+  def delete(conn, _params) do
+    conn
+    |> Takso.Authentication.logout()
+    |> redirect(to: page_path(conn, :index))
+  end
+
+
 end
 
