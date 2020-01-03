@@ -18,6 +18,7 @@ defmodule TaksoWeb.Router do
 
     get "/", PageController, :index
     resources "/users", UserController
+    resources "/bookings", BookingController
   end
 
   # Other scopes may use custom stacks.
