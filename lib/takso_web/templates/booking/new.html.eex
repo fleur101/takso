@@ -1,4 +1,21 @@
-<input id="pickup_address">
+<%= form_for :placeholder, booking_path(@conn, :create), fn booking -> %>
+  <div class="form-group">
+    <%= label booking, :pickup_address, class: "control-label" %>
+    <%= text_input booking, :pickup_address, class: "form-control", id: "pickup_address" %>
+    <%= error_tag booking, :pickup_address %>
+  </div>
+
+  <div class="form-group">
+    <%= label booking, :dropoff_address, class: "control-label" %>
+    <%= text_input booking, :dropoff_address, class: "form-control", id: "dropoff_address" %>
+    <%= error_tag booking, :dropoff_address %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary", id: "submit_button" %>
+  </div>
+<% end %>
+<%# <input id="pickup_address">
 <input id="dropoff_address">
-<button id="submit_button">Submit</button>
+<button id="submit_button">Submit</button> %>
 

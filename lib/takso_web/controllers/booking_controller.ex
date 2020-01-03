@@ -8,7 +8,7 @@ defmodule TaksoWeb.BookingController do
   def create(conn, _param) do
     conn
     |> put_flash(:info, "Your taxi will arrive in 5 minutes")
-    |> redirect(to: booking_path(conn, :new))
+    |> redirect(to: user_path(conn, :index))
   end
 end
 
