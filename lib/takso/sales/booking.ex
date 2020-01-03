@@ -10,7 +10,7 @@ defmodule Takso.Sales.Booking do
     timestamps()
   end
 
-  def changeset(booking, attrs) do
+  def changeset(booking, attrs \\ %{}) do
     booking
     |> cast(attrs, [:pickup_address, :dropoff_address, :status])
     |> validate_required([:pickup_address, :dropoff_address])
