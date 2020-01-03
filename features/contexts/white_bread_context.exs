@@ -54,6 +54,7 @@ defmodule WhiteBreadContext do
   end
 
   then_ ~r/^I should receive a rejection message$/, fn state ->
+    assert visible_in_page? ~r/At present, there is no taxi available!/
     {:ok, state}
   end
 end
