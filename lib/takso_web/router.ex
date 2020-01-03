@@ -7,7 +7,6 @@ defmodule TaksoWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug Takso.Authentication, repo: Takso.Repo
   end
 
   pipeline :api do
