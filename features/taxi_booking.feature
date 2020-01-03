@@ -3,6 +3,13 @@ Feature: Taxi booking
   Such that I go to destination
   I want to arrange a taxi ride
 
+  Scenario: Login via STRS' web page (with confirmation)
+    Given I want to login with username "fred" and password "parool"
+    And I open login page
+    And I enter login information
+    When I submit the login request
+    Then I should receive a greeting message
+
   Scenario: Booking via STRS' web page (with confirmation)
     Given the following taxis are on duty
           | username | location	     | status    |
