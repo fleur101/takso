@@ -43,7 +43,8 @@ defmodule Takso.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
-      {:white_bread, "~> 4.5", only: [:test]}
+      {:white_bread, "~> 4.5", only: [:test]},
+      {:hound, "~> 1.0"}
     ]
   end
 
