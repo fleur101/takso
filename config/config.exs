@@ -17,6 +17,10 @@ config :takso, TaksoWeb.Endpoint,
   pubsub: [name: Takso.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :takso, Takso.Guardian,
+  issuer: "takso",
+  secret_key: "2MzZUajDC1KViGkpRYZfhvSsoVtVdBzshOkvDI9Dk8WP4rjrBEFTlNWbdjARrjsF"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
