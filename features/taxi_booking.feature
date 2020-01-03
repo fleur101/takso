@@ -26,7 +26,7 @@ Feature: Taxi booking
           | username  | location  | status |
           | juhan85   | Kaubamaja | busy   |
           | peeter88  | Kaubamaja | busy   |
-    qAnd I want to go from "Liivi 2" to "Lõunakeskus"
+    And I want to go from "Liivi 2" to "Lõunakeskus"
     And I open STRS' web page
     And I enter the booking information
     When I summit the booking request
