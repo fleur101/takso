@@ -1,4 +1,4 @@
-<%= form_for :placeholder, booking_path(@conn, :create), fn booking -> %>
+<%= form_for @changeset, booking_path(@conn, :create), fn booking -> %>
   <div class="form-group">
     <%= label booking, :pickup_address, class: "control-label" %>
     <%= text_input booking, :pickup_address, class: "form-control", id: "pickup_address" %>
@@ -15,7 +15,5 @@
     <%= submit "Submit", class: "btn btn-primary", id: "submit_button" %>
   </div>
 <% end %>
-<%# <input id="pickup_address">
-<input id="dropoff_address">
-<button id="submit_button">Submit</button> %>
+
 
