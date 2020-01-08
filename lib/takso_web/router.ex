@@ -36,6 +36,7 @@ defmodule TaksoWeb.Router do
     resources "/users", UserController
     get "/bookings/summary", BookingController, :summary
     resources "/bookings", BookingController
+    get "/taxis", TaxiController, :show_taxis
   end
 
   # Other scopes may use custom stacks.
